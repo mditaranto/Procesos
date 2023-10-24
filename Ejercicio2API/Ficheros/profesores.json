@@ -1,0 +1,11 @@
+[
+    {
+        "id": 3,
+        "DNI": "12345678A",
+        "Nombre": "Pepe Jose",
+        "Apellidos": "Gonzalez Rufo",
+        "Telefono": 625382927,
+        "Direccion": "C/inventada, 23",
+        "CuentaBancaria": "1234 1234 1234 1234"
+    }
+]
