@@ -1,11 +1,1 @@
-[
-    {
-        "id": 3,
-        "DNI": "12345678A",
-        "Nombre": "Pepe Jose",
-        "Apellidos": "Gonzalez Rufo",
-        "Telefono": 625382927,
-        "Direccion": "C/inventada, 23",
-        "CuentaBancaria": "1234 1234 1234 1234"
-    }
-]
+[{"Apellidos": "Gonzalez Rufo", "CuentaBancaria": "1234 1234 1234 1234", "DNI": "12345678A", "Direccion": "C/inventada, 23", "Nombre": "Pepe Jose", "Telefono": 625382927, "id": 2}, {"Apellidos": "Gonzalez Perez", "CuentaBancaria": "1234 1234 1234 1234", "DNI": "12345478A", "Direccion": "C/inventada, 23", "Nombre": "Jose", "Telefono": 625382727, "id": 1}, {"Apellidos": "Lora Rufo", "CuentaBancaria": "1234 1234 1234 1234", "DNI": "12378678A", "Direccion": "C/inventada, 23", "Nombre": "Pepe", "Telefono": 625232927, "id": 3}, {"Apellidos": "Desarrollador Indie", "CuentaBancaria": "1234 1234 1234 1234", "DNI": "12345478B", "Direccion": "C/inventada, 23", "Nombre": "Alva Majo", "Telefono": 625222727, "id": 4}]

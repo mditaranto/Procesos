@@ -1,4 +1,5 @@
 from flask import *
+from flask_jwt_extended import jwt_required
 import requests
 from app.funciones.funciones import *
 
@@ -27,6 +28,7 @@ def getProfe(id):
     return{"error":"profesor not found"}, 404
 
 @profBP.post("/")
+@jwt_required() 
 def addProfe():
     prof = leerFichero(rutaFichero)
     if request.is_json:
@@ -40,6 +42,7 @@ def addProfe():
 # Actualiza un recurso
 @profBP.put("/<int:id>")
 @profBP.patch("/<int:id>")
+@jwt_required() 
 def modify_profe(id):
     prof = leerFichero(rutaFichero)
     if request.is_json:
@@ -57,6 +60,7 @@ def modify_profe(id):
 
 # Elimina un recurso
 @profBP.delete("/<int:id>")
+@jwt_required() 
 def delete_profe(id):
     prof = leerFichero(rutaFichero)
     for profe in prof:

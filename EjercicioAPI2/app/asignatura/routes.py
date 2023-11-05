@@ -1,4 +1,5 @@
 from flask import *
+from flask_jwt_extended import jwt_required
 import requests
 from app.funciones.funciones import *
 
@@ -6,6 +7,10 @@ asigBP = Blueprint("asig", __name__)
 
 asigFichero = "EjercicioAPI2/ficheros/asignatura.json"
 profFichero= "EjercicioAPI2/ficheros/profesores.json"
+
+def _find_nextId():
+    asig = leerFichero(asigFichero)
+    return max(asigna['id'] for asigna in asig) + 1
 
 @asigBP.get('/')
 def getAsig():
@@ -21,6 +26,7 @@ def getAsignatura(id):
     return{"error":"Asignatura not found"}, 404
 
 @asigBP.post("/")
+@jwt_required() 
 def addAsig():
     Asig = leerFichero(asigFichero)
     if request.is_json:
@@ -34,6 +40,7 @@ def addAsig():
 
 @asigBP.put("/<int:id>")
 @asigBP.patch("/<int:id>")
+@jwt_required() 
 def modify_Asig(id):
     Asig = leerFichero(asigFichero)
     if request.is_json:
@@ -50,11 +57,12 @@ def modify_Asig(id):
     return {"error": "No valid format"}, 415
 
 @asigBP.delete("/<int:id>")
+@jwt_required() 
 def delete_Asig(id):
     Asig = leerFichero(asigFichero)
     for Asigna in Asig:
         if Asigna['id'] == id:
-            Asigna.remove(Asigna)
+            Asig.remove(Asigna)
             return "{}", 200
     
     return {"error": "Agignatura not found"}, 404

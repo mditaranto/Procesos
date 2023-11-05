@@ -1,15 +1,1 @@
-[
-    {
-        "Id": 1,
-        "Titulo": "Lengua",
-        "NumHoras": 6,
-        "IdProfesor": 3
-    },
-
-    {
-        "Id": 2,
-        "Titulo": "Mates",
-        "NumHoras": 6,
-        "IdProfesor": 2
-    }
-]
+[{"IdProfesor": 3, "NumHoras": 6, "Titulo": "Lengua", "id": 1}, {"IdProfesor": 3, "NumHoras": 6, "Titulo": "Mates", "id": 2}, {"IdProfesor": 1, "NumHoras": 2, "Titulo": "Fisica", "id": 3}, {"IdProfesor": 2, "NumHoras": 3, "Titulo": "Biologia", "id": 4}, {"IdProfesor": 3, "NumHoras": 1, "Titulo": "Tutoria", "id": 5}]

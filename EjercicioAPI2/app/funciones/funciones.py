@@ -1,4 +1,6 @@
+import string
 from flask import *
+import random
 
 # Leemos el fichero json
 def leerFichero(nombreFichero):
@@ -12,3 +14,13 @@ def escribeFichero(nombreFichero,data):
     archivo = open(nombreFichero, "w")
     json.dump(data, archivo)
     archivo.close()
+    
+# Contraseña aleatoria
+def randomPass():
+    chars = string.ascii_letters
+    password = ""
+    
+    for a in range(10):
+        password += random.choice(chars)
+        
+    return(password)
