@@ -4,10 +4,13 @@ import random
 
 # Leemos el fichero json
 def leerFichero(nombreFichero):
-    archivo = open(nombreFichero, "r")
-    data = json.load(archivo)
-    archivo.close()
-    return data
+    try:
+        archivo = open(nombreFichero, "r")
+        data = json.load(archivo)
+        archivo.close()
+        return data
+    except json.JSONDecodeError:
+        return {}
 
 # Escribimos en el fichero json
 def escribeFichero(nombreFichero,data):
