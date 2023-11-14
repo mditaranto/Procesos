@@ -1,4 +1,4 @@
-from flask import * 
+from flask import Flask
 from flask_jwt_extended import JWTManager
 from .asignatura.routes import asigBP
 from .profesor.routes import profBP
@@ -6,7 +6,7 @@ from .users.routes import usersBP
 from .funciones.funciones import randomPass
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = randomPass()
+app.config['SECRET_KEY'] = 'aa'
 jwt = JWTManager(app)
 
 app.register_blueprint(asigBP,url_prefix="/asignatura")

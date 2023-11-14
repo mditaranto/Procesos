@@ -13,6 +13,7 @@ def _find_nextId():
     return max(asigna['id'] for asigna in asig) + 1
 
 @asigBP.get('/')
+@jwt_required() 
 def getAsig():
     asig = leerFichero(asigFichero)
     return(asig)
