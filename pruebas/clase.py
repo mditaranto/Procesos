@@ -10,5 +10,3 @@ def menor(num1, num2):
 
 if __name__ == "__main__":
     inicio = time.time()
-    
-    p1 = Process(target=suma, args=(3,5))
