@@ -2,7 +2,7 @@ from multiprocessing import *
 import time
 
 def leer_archivo(cola):
-    f = open('numeros.txt', 'r')
+    f = open('Ej4.txt', 'r')
     for linea in f:
         numero = (linea)
         cola.send(numero)
