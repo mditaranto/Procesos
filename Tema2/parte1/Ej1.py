@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     # Imprimir el tiempo de ejecución
     print(f'Tiempo de ejecución: {fin - inicio}')
-    print(f'Tiempo de ejecución: {fin - inicio}')
+
 
 
 
