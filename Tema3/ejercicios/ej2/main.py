@@ -1,5 +1,7 @@
 from contador import *
 
-for i in range(10):
-    hilo = contadorThread(i)
-    hilo.start()
+if __name__ == "__main__":
+
+    for i in range(10):
+        hilo = contadorThread(i)
+        hilo.start()

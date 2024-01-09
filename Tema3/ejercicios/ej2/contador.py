@@ -7,13 +7,7 @@ class contadorThread(Thread):
         Thread.__init__(self, name=num)
 
     def run(self):
-        if (self.contador >= 1000):
-            self.contador += 1
-            print(f"{self.name}: {self.contador}")
+        while contadorThread.contador < 1000:
+            contadorThread.contador += 1
+            print(f"{self.name}: {contadorThread.contador}")
 
-if (__name__ == '__main__'):
-    # 10 Thread
-
-    for x in range(10):
-        hilo = contadorThread(x)
-        hilo.start()

@@ -8,6 +8,7 @@ class Trabajo(Thread):
         self.tiempo = random.randint(1, 10)
 
     def run(self):
-        print("Soy", self.name, "y estoy trabajando")
-        time.sleep(self.tiempo)
-        print("Soy", self.name, "y termine de trabajar")
+        while True:
+            print("Soy", self.name, "y estoy trabajando")
+            time.sleep(self.tiempo)
+            print("Soy", self.name, "y termine de trabajar")
