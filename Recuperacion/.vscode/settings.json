@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./proyecto_recu/proyecto_recu/app"
+    ]
+}
