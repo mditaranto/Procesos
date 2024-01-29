@@ -15,16 +15,18 @@ class adivinar(Thread):
 
             adivinar.bloqueo.acquire()
             if not adivinar.numeroacertado:
+                adivinar.bloqueo.release()
                 numeroaleatorio = random.randint(0, 100)
                 if numeroaleatorio == adivinar.numero:
+                    adivinar.bloqueo.acquire()
                     adivinar.numeroacertado = True
                     adivinar.bloqueo.release()
                     print(f"{self.name} ha acertado el numero {adivinar.numero}")
+                    break
                 else:
-                    adivinar.bloqueo.release()
                     print(f"{self.name} ha dicho el numero {numeroaleatorio} y no ha acertado")
             else:
-                adivinar.bloqueo.release()
+                print("Otro hilo ya ha acertado")
                 break
 
             
