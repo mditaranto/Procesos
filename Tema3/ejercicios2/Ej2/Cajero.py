@@ -3,7 +3,8 @@ import random
 import time
 
 class Cajero(Thread):
-    semafaro = Semaphore(1)
+    #Es un lock porque solo entra 1 hilo a la vez
+    semafaro = Semaphore(1) #Esto esta mal, deberia ser un lock
 
     def __init__(self, num):
         Thread.__init__(self, name=num)
